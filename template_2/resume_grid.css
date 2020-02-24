@@ -1,0 +1,63 @@
+.resume {
+    display: grid;
+    width  : 50mm;
+    /* hardcoded purely for codepen example */
+    height: 70.5mm;
+    /* hardcoded purely for codepen example */
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows   : 1fr 1fr 1fr 1fr;
+    box-shadow           : 0 5px 9px 0 rgba(0, 0, 0, 0.35);
+    grid-gap             : 5px;
+    grid-template-areas  :
+        "name  photo"
+        "work  about"
+        "work  education"
+        "community  skills";
+}
+
+.circle {
+    border       : 1px solid black;
+    height       : 30px;
+    width        : 30px;
+    border-radius: 50%;
+}
+
+.grid-area {
+    padding: 1em 1em 1em 1em;
+    border : 1px black solid;
+}
+
+.name {
+    grid-area: name;
+}
+
+.photo {
+    grid-area: photo;
+}
+
+.about {
+    grid-area: about;
+}
+
+.work {
+    grid-area: work;
+}
+
+.skills {
+    grid-area: skills;
+}
+
+.education {
+    grid-area: education;
+}
+
+.community {
+    grid-area: community;
+}
+
+.wrapper {
+    padding        : 0;
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-evenly;
+}

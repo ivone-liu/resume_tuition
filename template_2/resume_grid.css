@@ -8,11 +8,22 @@
     grid-template-rows   : 1fr 1fr 1fr 1fr;
     box-shadow           : 0 5px 9px 0 rgba(0, 0, 0, 0.35);
     grid-gap             : 5px;
-    grid-template-areas  :
+}
+
+.education-first {
+    grid-template-areas:
         "name  photo"
         "work  about"
         "work  education"
-        "community  skills";
+        "community skills";
+}
+
+.skills-first {
+    grid-template-areas:
+        "name  photo"
+        "work  about"
+        "work  skills"
+        "community education";
 }
 
 .circle {
@@ -35,16 +46,20 @@
     grid-area: photo;
 }
 
+
 .about {
     grid-area: about;
 }
+
 
 .work {
     grid-area: work;
 }
 
 .skills {
-    grid-area: skills;
+    grid-area       : skills;
+    background-color: grey;
+
 }
 
 .education {

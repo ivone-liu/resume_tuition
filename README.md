@@ -173,6 +173,8 @@ grid-template-areas:
 }
 ```
 
-<video src="https://attach-ivone.oss-cn-hongkong.aliyuncs.com/responsive_demo.mov"></video>
+<video id="video" controls="" preload="none">
+<source id="ogv" src="https://attach-ivone.oss-cn-hongkong.aliyuncs.com/responsive_demo.mov" type="video/mov">
+</video>
 
 

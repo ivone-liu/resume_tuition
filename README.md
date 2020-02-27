@@ -1,6 +1,6 @@
 ## 新的一年，找到新的工作？让我们用CSS Grid属性制作一个漂亮简历！
 
-![原文地址](https://css-tricks.com/new-year-new-job-lets-make-a-grid-powered-resume/)
+[原文地址](https://css-tricks.com/new-year-new-job-lets-make-a-grid-powered-resume/)
 
 许多流行的简历设计是将模块布置成网格状态来充分利用网页的空间。我们用CSS Grid来创建一个无论是打印还是在不同尺寸显示器上都看起来很优雅的简历。这样，无论是离线和在线都可以正常使用简历，这种小技巧在新的一年里可能会派上用场。
 
@@ -61,15 +61,118 @@
 
 这是到目前我们所能看到的样子
 
+![layout1](https://i.loli.net/2020/02/27/TsuzdKYLBhi1ClO.png)
+
 ***tips: CSS Grid提供了许多十分有用的属性，比如调整大小、页面布局以及许多简略的属性。我们通过展示一个可能的方式来让元素变得简单。去学习一些不错的代码思想来让你的CSS Grid表现得更出色。***
 
 ### 调整布局
 
+`grid-template-areas` 属性让布局变得更简单。比如，如果你认为相比起教育背景来说雇主会对你的技能部分更加关注，你只需要在 `grid-template-areas` 区域中切换模块名称，无需其他的操作就能实现自动交换布局。
 
-![layout1](https://i.loli.net/2020/02/27/TsuzdKYLBhi1ClO.png)
+```css
+.resume {
+  grid-template-areas:
+    "name photo"
+    "work about"
+    "work skills"  /* skills now moved above education */
+    "community education";
+}
+```
+
+![resume-02.jpg](https://i.loli.net/2020/02/27/rdIwn6WacXGbV9R.jpg)
 
 ![layout2](https://i.loli.net/2020/02/27/tr6zaPi9IuBolYO.png)
 
+我们可以修改很少CSS代码来实现受欢迎的左侧窄列简历设计。这是对于网格来说最合适的应用场景：我们可以重新布局已命名的网格区域，在其他区域变动的时候精确保持原有的位置不变。
+
+```css
+.resume {
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "photo education"
+    "name work"
+    "about work"
+    "skills community";
+}
+```
+
+![resume-03-1.jpg](https://i.loli.net/2020/02/27/PNr7yzfVsEGHcA1.jpg)
+
 ![layout3](https://i.loli.net/2020/02/27/Y9F2nPZtJc4WKUN.png)
 
+
+### 分隔栏
+
+如果你想在简历中添加个人资料展示，我们可以在网格模板最下面添加第三列。注意，我们在更新时需要保持列单位的一致，以便于个人资料部分能跨两列保持正常布局。
+
+```css
+.resume {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "name name photo"
+    "work work about"
+    "work work education"
+    "community references skills";
+}
+```
+
+![resume-04-1.jpg](https://i.loli.net/2020/02/27/omqOv3NRdIVznJb.jpg)
+
 ![layout4](https://i.loli.net/2020/02/27/g1YOPMcrGmx7ihq.png)
+
+***tips：在两个模块中间的间隔，可以用grid-gap属性来控制***
+
+
+### 响应式
+
+对于小尺寸屏幕来说，比如移动设备，我们可以把简历部分放在一个与屏幕等宽的列中。
+
+```css
+grid-template-columns: 1fr;
+grid-template-areas:
+  "photo"
+  "name"
+  "about"
+  "work"
+  "education"
+  "skills"
+  "community"
+  "references"
+}
+```
+
+然后对于较宽的屏幕我们可以使用media query来调整布局。
+
+```css
+@media (min-width: 1200px) {
+  .resume {
+    grid-template-areas:
+      "name photo"
+      "work about"
+      "work education"
+      "community skills";
+  }
+}
+```
+
+以上两种尺寸中或许还有一种情况，比如，在类似于平板来说的中等尺寸屏幕，我们或许想将所有的内容放在一个独立列中，但是个人和图片并排在顶部展示。
+
+```css
+@media (min-width: 900px) {
+  .resume {
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas:
+        "name photo"
+        "about about"
+        "work work"
+        "education education"
+        "skills skills"
+        "community community"
+        "references references"
+  }
+}
+```
+
+<video src="https://attach-ivone.oss-cn-hongkong.aliyuncs.com/responsive_demo.mov"></video>
+
+

@@ -177,6 +177,8 @@ grid-template-areas:
 }
 ```
 
+[![点击查看录制的响应式布局视频](https://attach-ivone.oss-cn-hongkong.aliyuncs.com/responsive_demo.mov)](https://i.loli.net/2020/02/27/crIZCOVnbpoASYJ.png)
+
 [点击查看录制的响应式布局视频](https://attach-ivone.oss-cn-hongkong.aliyuncs.com/responsive_demo.mov)
 
 ### 为单页打印做好准备

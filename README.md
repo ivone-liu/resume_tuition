@@ -59,7 +59,7 @@
 }
 ```
 
-这是到目前我们所能看到的样子
+这是到目前我们所能看到的样子 [查看代码](https://github.com/ivone-liu/resume_tuition/tree/master/template_1)
 
 ![layout1](https://i.loli.net/2020/02/27/TsuzdKYLBhi1ClO.png)
 
@@ -83,6 +83,8 @@
 
 ![layout2](https://i.loli.net/2020/02/27/tr6zaPi9IuBolYO.png)
 
+[查看代码](https://github.com/ivone-liu/resume_tuition/tree/master/template_2)
+
 我们可以修改很少CSS代码来实现受欢迎的左侧窄列简历设计。这是对于网格来说最合适的应用场景：我们可以重新布局已命名的网格区域，在其他区域变动的时候精确保持原有的位置不变。
 
 ```css
@@ -100,6 +102,7 @@
 
 ![layout3](https://i.loli.net/2020/02/27/Y9F2nPZtJc4WKUN.png)
 
+[查看代码](https://github.com/ivone-liu/resume_tuition/tree/master/template_3)
 
 ### 分隔栏
 
@@ -120,8 +123,9 @@
 
 ![layout4](https://i.loli.net/2020/02/27/g1YOPMcrGmx7ihq.png)
 
-***tips：在两个模块中间的间隔，可以用grid-gap属性来控制***
+[查看代码](https://github.com/ivone-liu/resume_tuition/tree/master/template_4)
 
+***tips：在两个模块中间的间隔，可以用grid-gap属性来控制***
 
 ### 响应式
 

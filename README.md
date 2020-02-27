@@ -1,4 +1,4 @@
-## 新的一年，找到新的工作？让我们用CSS Grid属性制作一个漂亮简历！
+## 新的一年，找到新的工作？让我们用CSS Grid制作一个漂亮简历！
 
 [原文地址](https://css-tricks.com/new-year-new-job-lets-make-a-grid-powered-resume/)
 
